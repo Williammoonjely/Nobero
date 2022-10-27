@@ -1,626 +1,450 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NOBERO | Home</title>
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+NOBERO | Home
+{% endblock title %}
+
+{% block content %}
 
 
-
-     <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" 
-    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-
-        
-    <script src="https://kit.fontawesome.com/59e29f4926.js" crossorigin="anonymous"></script>
-    {% load static%}
-    <link rel="stylesheet" href="{% static 'style.css'%}">
-
-</head>
-<body>
-  <section class="header">
-    <nav class="navbar navbar-expand-lg bg-light" style="padding: 15px;">
-        <div class="container-fluid">
-          <img src="{% static 'images/logo.webp' %}" alt="">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navig' %} ation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: black;">
-                Men
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Topwear</a></li>
-                  <li><a class="dropdown-item" href="#">Bottomwear</a></li>
-                  <li><a class="dropdown-item" href="#">Combo Offers</a></li>
-                  <li><a class="dropdown-item" href="#"></a>Sports & Activewear</li>
-                </ul>
-              </li>
-
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: black;">
-                  Women
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Topwear</a></li>
-                  <li><a class="dropdown-item" href="#">Bottomwear</a></li>
-                  <li><a class="dropdown-item" href="#">Combo Offers</a></li>
-                  <li><a class="dropdown-item" href="#"></a>Sports & Activewear</li>
-                </ul>
-              </li>
-
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: black;">
-                  Hoodies & Sweatshirts
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Printed Hoodies</a></li>
-                  <li><a class="dropdown-item" href="#">Fassion Forware Hoodies</a></li>
-                  <li><a class="dropdown-item" href="#">Classic Plain Hoodies</a></li>
-                  <li><a class="dropdown-item" href="#">Classic Plain Zipper Hoodies</a></li>
-                  <li><a class="dropdown-item" href="#">Cllasic Sweatshirt</a></li>
-                  <li><a class="dropdown-item" href="#">Classic Kid Hoodies</a></li>
-                  <li><a class="dropdown-item" href="#">Wanderer-Travel Hoodies</a></li>
-                  <li><a class="dropdown-item" href="#">Hoodie Combo</a></li>
-                </ul>
-              </li>
-
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: black;">
-                  Everyday Co-ords
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Men Co-ords</a></li>
-                  <li><a class="dropdown-item" href="#">Women Co-ords</a></li>
-                </ul>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link active">TravelHoodie</a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">TrackOrder</a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link active btn btn-light" style="padding: 4px;" >Login</a>
-              </li>
-            </ul>
-
-            <form class="d-flex" role="search">
-              <span class="input-group-text border-0" id="search-addon">
-                <a href=""><i class="fas fa-search" style="color: black;"></i></a>
-              </span>
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            </form>
-            <a href=""><i class="fa-solid fa-user" style="color:black;"></i></a>
-            <a href=""><i class="fa-solid fa-cart-shopping" style="color:black;"></i></a>
-          </div>
-        </div>
-      </nav>
-    </section>
-
-    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="10000">
-          <img src="{% static 'images/banner5.png' %}" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item" data-bs-interval="2000">
-          <img src="{% static  'images/Bnner2.png' %}"class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="{% static  'images/banner3.png' %}" class="d-block w-100" alt="...">
-        </div>
-      </div>
-      <button class="carousel-control-prev"  data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-        <span  aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-        <span  aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <img src="{% static 'images/banner5.png' %}" class="d-block w-100" alt="...">
     </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="{% static  'images/Bnner2.png' %}"class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static  'images/banner3.png' %}" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev"  data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span  aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span  aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+
+</div>
 
 
 
-    <div class="container" style="padding:60px;">
-      <div class="row">
-          <div class="col-md-4">
-            <div class="cours2" style="overflow:hidden;">
-              <a href=""><img class="hover" src="{% static 'images/MEN-JOGGERS-570X630_720x.jpg' %}" 
-              style="width:100%;height:600px;border:1px solid transparent;transition:1s;"></a>
-            </div>
-          </div>
-           <div class="col-md-3">
-            <div class="cours2" style="overflow:hidden;">
-              <a href=""><img class="hover" src="{% static 'images/mens cord.avif' %} " 
-              style="width:100%;height:275px;border:1px solid transparent;transition:1s;"></a>
-            </div>
-            <div class="cours2" style="overflow:hidden;">
-              <a href=""><img class="hover" src="{% static 'images/couple.avif' %} " 
-              style="width:100%;height:275px;border:1px solid transparent;transition:1s;"></a>
-            </div>
-          </div>
-           <div class="col-md-4">
-            <div class="cours2" style="overflow:hidden;">
-              <a href=""><img class="hover" src="{% static 'images/WOMENS-JOGGERS---270-X-630_360x.webp' %}" 
-              style="width:90%;height:600px;border:1px solid transparent;transition:1s;"> </a>
-            </div>
-          </div>
+<div class="container" style="padding:60px;">
+  <div class="row">
+      <div class="col-md-4">
+        <div class="cours2" style="overflow:hidden;">
+          <a href=""><img class="hover" src="{% static 'images/MEN-JOGGERS-570X630_720x.jpg' %}" 
+          style="width:100%;height:600px;border:1px solid transparent;transition:1s;"></a>
+        </div>
+      </div>
+       <div class="col-md-3">
+        <div class="cours2" style="overflow:hidden;">
+          <a href=""><img class="hover" src="{% static 'images/mens cord.avif' %} " 
+          style="width:100%;height:275px;border:1px solid transparent;transition:1s;"></a>
+        </div>
+        <div class="cours2" style="overflow:hidden;">
+          <a href=""><img class="hover" src="{% static 'images/couple.avif' %} " 
+          style="width:100%;height:275px;border:1px solid transparent;transition:1s;"></a>
+        </div>
+      </div>
+       <div class="col-md-4">
+        <div class="cours2" style="overflow:hidden;">
+          <a href=""><img class="hover" src="{% static 'images/WOMENS-JOGGERS---270-X-630_360x.webp' %}" 
+          style="width:90%;height:600px;border:1px solid transparent;transition:1s;"> </a>
+        </div>
+      </div>
+  </div>
+</div>
+
+<h2 class="Pshop">SHOP BY CATEGORY</h2>
+
+<div class="container" style="text-align:center;">
+  <div class="row">
+      <div class="col-md-6">
+        <div class="cours2" style="overflow:hidden;">
+          <a href=""><img class="hover" src="{% static 'images/HOODIE-SALE_720x.webp' %}" 
+          style="width:100%;height:100%;border:1px solid transparent;transition:1s;"></a>
+        </div>
+      </div>
+       <div class="col-md-6">
+        <div class="cours2" style="overflow:hidden;">
+          <a href=""><img class="hover" src="{% static 'images/TRAVEL-HOODIE_720x.jpg' %}" 
+          style="width:100%;height:100%;border:1px solid transparent;transition:1s;"> </a>
+        </div>
+      </div>
+  </div>
+</div>
+
+<div class="container" style="text-align:center;">
+  <div class="row">
+      <div class="col-md-6">
+        <div class="cours2" style="overflow:hidden;">
+          <a href=""><img class="hover" src="{% static 'images/MENS-JOGGERS C3.jpg' %}" 
+          style="width:100%;height:100%;border:1px solid transparent;transition:1s;"></a>
+        </div>
+      </div>
+       <div class="col-md-6">
+        <div class="cours2" style="overflow:hidden;">
+          <a href=""><img class="hover" src="{% static 'images/WOMENS-JOGGERS C4.webp' %}" 
+          style="width:100%;height:100%;border:1px solid transparent;transition:1s;"> </a>
+        </div>
+      </div>
+  </div>
+</div>
+
+<div class="container" style="text-align:center;">
+  <div class="row">
+      <div class="col-md-6">
+        <div class="cours2" style="overflow:hidden;">
+          <a href=""><img class="hover" src="{% static 'images/mens-co-ords C5.jpg' %}" 
+          style="width:100%;height:100%;border:1px solid transparent;transition:1s;"></a>
+        </div>
+      </div>
+       <div class="col-md-6">
+        <div class="cours2" style="overflow:hidden;">
+          <a href=""><img class="hover" src="{% static 'images/MENS-SHORTS_C6.jpg' %}" 
+          style="width:100%;height:100%;border:1px solid transparent;transition:1s;"> </a>
+        </div>
+      </div>
+  </div>
+</div>
+
+<div class="container" style="text-align:center;">
+  <div class="row">
+      <div class="col-md-6">
+        <div class="cours2" style="overflow:hidden;">
+          <a href=""><img class="hover" src="{% static 'images/CAMO-STORE_C7.jpg' %}" 
+          style="width:100%;height:100%;border:1px solid transparent;transition:1s;"></a>
+        </div>
+      </div>
+       <div class="col-md-6">
+        <div class="cours2" style="overflow:hidden;">
+          <a href=""><img class="hover" src="{% static 'images/COMBO-STORE_C8.jpg' %}" 
+          style="width:100%;height:100%;border:1px solid transparent;transition:1s;"> </a>
+        </div>
+      </div>
+  </div>
+</div>
+
+<div class="container" style="text-align:center;">
+  <div class="row">
+      <div class="col-md-6">
+        <div class="cours2" style="overflow:hidden;">
+          <a href=""><img class="hover" src="{% static 'images/WOMENS-COORDS_C9.jpg' %}" 
+          style="width:100%;height:100%;border:1px solid transparent;transition:1s;"></a>
+        </div>
+      </div>
+       <div class="col-md-6">
+        <div class="cours2" style="overflow:hidden;">
+          <a href=""><img class="hover" src="{% static 'images/WOMENS-SHORTS_C9.jpg' %}" 
+          style="width:100%;height:100%;border:1px solid transparent;transition:1s;"> </a>
+        </div>
+      </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="trend">
+  <h2>TRENDING</h2>
+  <h6>Top view in this week</h6>
+</div>
+
+
+<section class="container1">
+  <div class="tcontainer">
+    <a href="">
+      <img src="{% static 'images/womenj1.webp' %}" alt="">
+      <img class="ttopimg" src="{% static 'images/womenj2.webp' %}" alt="">
+    </a>
+    <a href="">Q-Rious </a>
+    <div class="rate">
+      <h6 style="text-align:center;">₹ 799 </h6>
+      <p style="color:red ; text-align: center;">(41% OFF)</p> 
+    </div>
+  </div>
+  <div class="tcontainer">
+    <a href="">
+      <img src="{% static 'images/womenj3.webp' %}" alt="">
+      <img class="ttopimg" src="{% static 'images/women j4.webp' %}" alt="">
+    </a>
+    <a href="">RiRi Jogger</a>
+    <div class="rate">
+      <h6 style="text-align:center;">₹ 1599 </h6>
+      <p style="color:red ; text-align: center;">(39% OFF)</p> 
+    </div>
+  </div>
+  <div class="tcontainer">
+    <a href="">
+      <img src="{% static 'images/women j8.webp' %}" alt="">
+      <img class="ttopimg" src="{% static 'images/women j9.webp' %}" alt="">
+    </a>
+    <a href="">Tregga Jogger </a>
+    <div class="rate">
+      <h6 style="text-align:center;">₹ 1499 </h6>
+      <p style="color:red ; text-align: center;">(26% OFF)</p> 
+    </div>
+  </div>
+</section>
+
+<section class="container1">
+  <div class="tcontainer">
+    <a href="">
+      <img src="{% static 'images/jogger1.webp' %}" alt="">
+      <img class="ttopimg" src="{% static 'images/jogger2.webp' %}" alt="">
+    </a>
+    <a href="">Cultsport</a>
+    <div class="rate">
+      <h6 style="text-align:center;">₹ 1819 </h6>
+      <p style="color:red ; text-align: center;">(35% OFF)</p> 
+    </div>
+  </div>
+  <div class="tcontainer">
+    <a href="">
+      <img src="{% static 'images/jogger3.jpg' %}" alt="">
+      <img class="ttopimg" src="{% static 'images/jogger4.jpg' %}" alt="">
+    </a>
+    <a href="">Ketch</a>
+    <div class="rate">
+      <h6 style="text-align:center;">₹ 1039 </h6>
+      <p style="color:red ; text-align: center;">(54% OFF)</p> 
+    </div>
+  </div>
+  <div class="tcontainer">
+    <a href="">
+      <img src="{% static 'images/jogger5.jpeg' %}" alt="">
+      <img class="ttopimg" src="{% static 'images/jogger6.jpeg' %}" alt="">
+    </a>
+    <a href="">Highlander </a>
+    <div class="rate">
+      <h6 style="text-align:center;">₹ 1151 </h6>
+      <p style="color:red ; text-align: center;">(52% OFF)</p> 
+    </div>
+  </div>
+</section>
+
+<div class="load">
+ <button >Load More</button>
+</div>
+
+<div class="trend">
+  <h2>----- BEST SELLER -----</h2>
+  <h6>Top sale in this week</h6>
+</div>
+
+
+<section class="container1">
+  <div class="tcontainer">
+    <a href="">
+      <img src="{% static 'images/pant j3.webp' %}" alt="">
+      <img class="ttopimg" src="{% static 'images/pantj4.webp' %}" alt="">
+    </a>
+    <a href="">Urban</a>
+    <div class="rate">
+      <h6 style="text-align:center;">₹ 1819 </h6>
+      <p style="color:red ; text-align: center;">(35% OFF)</p> 
+    </div>
+  </div>
+  <div class="tcontainer">
+    <a href="">
+      <img src="{% static 'images/pantj5.webp' %}" alt="">
+      <img class="ttopimg" src="{% static 'images/pantj6.webp' %}" alt="">
+    </a>
+    <a href="">Scarlett </a>
+    <div class="rate">
+      <h6 style="text-align:center;">₹ 1039 </h6>
+      <p style="color:red ; text-align: center;">(54% OFF)</p> 
+    </div>
+  </div>
+  <div class="tcontainer">
+    <a href="">
+      <img src="{% static 'images/pantj7.webp' %}" alt="">
+      <img class="ttopimg" src="{% static 'images/pantj8.webp' %}" alt="">
+    </a>
+    <a href="">Wander Soul </a>
+    <div class="rate">
+      <h6 style="text-align:center;">₹ 1151 </h6>
+      <p style="color:red ; text-align: center;">(52% OFF)</p> 
+    </div>
+  </div>
+</section>
+
+<section class="container1">
+  <div class="tcontainer">
+    <a href="">
+      <img src="{% static 'images/hoodi j1.webp' %}" alt="">
+      <img class="ttopimg" src="{% static 'images/hoodi j2.webp' %}" alt="">
+    </a>
+    <a href="">Assassins</a>
+    <div class="rate">
+      <h6 style="text-align:center;">₹ 1819 </h6>
+      <p style="color:red ; text-align: center;">(35% OFF)</p> 
+    </div>
+  </div>
+  <div class="tcontainer">
+    <a href="">
+      <img src="{% static 'images/hoodi j3.webp' %}" alt="">
+      <img class="ttopimg" src="{% static 'images/hoodij4.webp' %}" alt="">
+    </a>
+    <a href="">Wanderer </a>
+    <div class="rate">
+      <h6 style="text-align:center;">₹ 1039 </h6>
+      <p style="color:red ; text-align: center;">(54% OFF)</p> 
+    </div>
+  </div>
+  <div class="tcontainer">
+    <a href="">
+      <img src="{% static 'images/hoodij5.webp' %}" alt="">
+      <img class="ttopimg" src="{% static 'images/hoodi j6.webp' %}" alt="">
+    </a>
+    <a href="">Classic Zipper </a>
+    <div class="rate">
+      <h6 style="text-align:center;">₹ 1151 </h6>
+      <p style="color:red ; text-align: center;">(52% OFF)</p> 
+    </div>
+  </div>
+</section>
+
+<div class="viewm" >
+ <button >  View More</button>
+</div>
+
+<div class="trend">
+  <h2>----- New Arrivals -----</h2>
+</div>
+
+<section class="container1">
+  <div class="tcontainer">
+    <a href="">
+      <img src="{% static 'images/lastj1.webp' %}" alt="">
+      <img class="ttopimg" src="{% static 'images/last j2.webp' %}" alt="">
+    </a>
+    <a href="">Intrigued</a>
+    <div class="rate">
+      <h6 style="text-align:center;">₹ 1819 </h6>
+      <p style="color:red ; text-align: center;">(35% OFF)</p> 
+    </div>
+  </div>
+  <div class="tcontainer">
+    <a href="">
+      <img src="{% static 'images/lastj3.webp' %}" alt="">
+      <img class="ttopimg" src="{% static 'images/last4.webp' %}" alt="">
+    </a>
+    <a href="">Allergic </a>
+    <div class="rate">
+      <h6 style="text-align:center;">₹ 1039 </h6>
+      <p style="color:red ; text-align: center;">(54% OFF)</p> 
+    </div>
+  </div>
+  <div class="tcontainer">
+    <a href="">
+      <img src="{% static 'images/pantj7.webp' %}" alt="">
+      <img class="ttopimg" src="{% static 'images/pantj8.webp' %}' " alt="">
+    </a>
+    <a href="">Classic Crew </a>
+    <div class="rate">
+      <h6 style="text-align:center;">₹ 1151 </h6>
+      <p style="color:red ; text-align: center;">(52% OFF)</p> 
+    </div>
+  </div>
+</section>
+
+<section class="container1">
+  <div class="tcontainer">
+    <a href="">
+      <img src="{% static 'images/short3.webp' %} " alt="">
+      <img class="ttopimg" src="{% static 'images/short4.webp' %} " alt="">
+    </a>
+    <a href="">Brute Shorts</a>
+    <div class="rate">
+      <h6 style="text-align:center;">₹ 1819 </h6>
+      <p style="color:red ; text-align: center;">(35% OFF)</p> 
+    </div>
+  </div>
+  <div class="tcontainer">
+    <a href="">
+      <img src="{% static 'images/short5.webp' %} " alt="">
+      <img class="ttopimg" src="{% static 'images/short6.webp' %}" alt="">
+    </a>
+    <a href="">Tyson Shorts</a>
+    <div class="rate">
+      <h6 style="text-align:center;">₹ 1039 </h6>
+      <p style="color:red ; text-align: center;">(54% OFF)</p> 
+    </div>
+  </div>
+  <div class="tcontainer">
+    <a href="">
+      <img src="{% static 'images/short7.webp' %}" alt="">
+      <img class="ttopimg" src="{% static 'images/short8.webp' %}" alt="">
+    </a>
+    <a href="">Bryant Shorts</a>
+    <div class="rate">
+      <h6 style="text-align:center;">₹ 1151 </h6>
+      <p style="color:red ; text-align: center;">(52% OFF)</p> 
+    </div>
+  </div>
+</section>
+
+<div class="viewm">
+ <button >  View More</button>
+</div>
+
+<section >
+  <div class="fetures">
+    <div class="f2">
+        <div class="imm">
+          <i class="fa-solid fa-car"></i>
+        </div>
+        <div>
+          <h4>FREE SHIPPING</h4>
+          <h6>Free Shipping On All Orders</h6>
+        </div>
+    </div>
+    <div class="f2">
+      <div class="imm">
+        <i class="fa-regular fa-circle"></i>
+      </div>
+      <div>
+        <h4>SUPPORT</h4>
+        <h6>Mon-Sat 10AM to 7PM</h6>
       </div>
     </div>
-
-    <h2 class="Pshop">SHOP BY CATEGORY</h2>
-
-    <div class="container" style="text-align:center;">
-      <div class="row">
-          <div class="col-md-6">
-            <div class="cours2" style="overflow:hidden;">
-              <a href=""><img class="hover" src="{% static 'images/HOODIE-SALE_720x.webp' %}" 
-              style="width:100%;height:100%;border:1px solid transparent;transition:1s;"></a>
-            </div>
-          </div>
-           <div class="col-md-6">
-            <div class="cours2" style="overflow:hidden;">
-              <a href=""><img class="hover" src="{% static 'images/TRAVEL-HOODIE_720x.jpg' %}" 
-              style="width:100%;height:100%;border:1px solid transparent;transition:1s;"> </a>
-            </div>
-          </div>
+    <div class="f2">
+      <div class="imm">
+        <i class="fa-solid fa-arrow-rotate-right" ></i>
+      </div>
+      <div>
+        <h4>15 DAYS RETURN</h4>
+        <h6>Simply return it within 15 days</h6>
       </div>
     </div>
-
-    <div class="container" style="text-align:center;">
-      <div class="row">
-          <div class="col-md-6">
-            <div class="cours2" style="overflow:hidden;">
-              <a href=""><img class="hover" src="{% static 'images/MENS-JOGGERS C3.jpg' %}" 
-              style="width:100%;height:100%;border:1px solid transparent;transition:1s;"></a>
-            </div>
-          </div>
-           <div class="col-md-6">
-            <div class="cours2" style="overflow:hidden;">
-              <a href=""><img class="hover" src="{% static 'images/WOMENS-JOGGERS C4.webp' %}" 
-              style="width:100%;height:100%;border:1px solid transparent;transition:1s;"> </a>
-            </div>
-          </div>
+    <div class="f2">
+      <div class="imm">
+        <i class="fa-solid fa-unlock-keyhole"></i>
       </div>
+      <div>
+        <h4>100% SECURE PAYMENTS</h4>
+        <h6>AES-256bit Secure Payments</h6>
+     </div>
     </div>
-
-    <div class="container" style="text-align:center;">
-      <div class="row">
-          <div class="col-md-6">
-            <div class="cours2" style="overflow:hidden;">
-              <a href=""><img class="hover" src="{% static 'images/mens-co-ords C5.jpg' %}" 
-              style="width:100%;height:100%;border:1px solid transparent;transition:1s;"></a>
-            </div>
-          </div>
-           <div class="col-md-6">
-            <div class="cours2" style="overflow:hidden;">
-              <a href=""><img class="hover" src="{% static 'images/MENS-SHORTS_C6.jpg' %}" 
-              style="width:100%;height:100%;border:1px solid transparent;transition:1s;"> </a>
-            </div>
-          </div>
-      </div>
-    </div>
-
-    <div class="container" style="text-align:center;">
-      <div class="row">
-          <div class="col-md-6">
-            <div class="cours2" style="overflow:hidden;">
-              <a href=""><img class="hover" src="{% static 'images/CAMO-STORE_C7.jpg' %}" 
-              style="width:100%;height:100%;border:1px solid transparent;transition:1s;"></a>
-            </div>
-          </div>
-           <div class="col-md-6">
-            <div class="cours2" style="overflow:hidden;">
-              <a href=""><img class="hover" src="{% static 'images/COMBO-STORE_C8.jpg' %}" 
-              style="width:100%;height:100%;border:1px solid transparent;transition:1s;"> </a>
-            </div>
-          </div>
-      </div>
-    </div>
-
-    <div class="container" style="text-align:center;">
-      <div class="row">
-          <div class="col-md-6">
-            <div class="cours2" style="overflow:hidden;">
-              <a href=""><img class="hover" src="{% static 'images/WOMENS-COORDS_C9.jpg' %}" 
-              style="width:100%;height:100%;border:1px solid transparent;transition:1s;"></a>
-            </div>
-          </div>
-           <div class="col-md-6">
-            <div class="cours2" style="overflow:hidden;">
-              <a href=""><img class="hover" src="{% static 'images/WOMENS-SHORTS_C9.jpg' %}" 
-              style="width:100%;height:100%;border:1px solid transparent;transition:1s;"> </a>
-            </div>
-          </div>
-      </div>
-    </div>
+  </div>
+</section>
 
 
-
-
-
-
-
-
-
-    <div class="trend">
-      <h2>TRENDING</h2>
-      <h6>Top view in this week</h6>
-    </div>
-
-
-    <section class="container1">
-      <div class="tcontainer">
-        <a href="">
-          <img src="{% static 'images/womenj1.webp' %}" alt="">
-          <img class="ttopimg" src="{% static 'images/womenj2.webp' %}" alt="">
-        </a>
-        <a href="">Q-Rious </a>
-        <div class="rate">
-          <h6 style="text-align:center;">₹ 799 </h6>
-          <p style="color:red ; text-align: center;">(41% OFF)</p> 
-        </div>
-      </div>
-      <div class="tcontainer">
-        <a href="">
-          <img src="{% static 'images/womenj3.webp' %}" alt="">
-          <img class="ttopimg" src="{% static 'images/women j4.webp' %}" alt="">
-        </a>
-        <a href="">RiRi Jogger</a>
-        <div class="rate">
-          <h6 style="text-align:center;">₹ 1599 </h6>
-          <p style="color:red ; text-align: center;">(39% OFF)</p> 
-        </div>
-      </div>
-      <div class="tcontainer">
-        <a href="">
-          <img src="{% static 'images/women j8.webp' %}" alt="">
-          <img class="ttopimg" src="{% static 'images/women j9.webp' %}" alt="">
-        </a>
-        <a href="">Tregga Jogger </a>
-        <div class="rate">
-          <h6 style="text-align:center;">₹ 1499 </h6>
-          <p style="color:red ; text-align: center;">(26% OFF)</p> 
-        </div>
-      </div>
-    </section>
-
-    <section class="container1">
-      <div class="tcontainer">
-        <a href="">
-          <img src="{% static 'images/jogger1.webp' %}" alt="">
-          <img class="ttopimg" src="{% static 'images/jogger2.webp' %}" alt="">
-        </a>
-        <a href="">Cultsport</a>
-        <div class="rate">
-          <h6 style="text-align:center;">₹ 1819 </h6>
-          <p style="color:red ; text-align: center;">(35% OFF)</p> 
-        </div>
-      </div>
-      <div class="tcontainer">
-        <a href="">
-          <img src="{% static 'images/jogger3.jpg' %}" alt="">
-          <img class="ttopimg" src="{% static 'images/jogger4.jpg' %}" alt="">
-        </a>
-        <a href="">Ketch</a>
-        <div class="rate">
-          <h6 style="text-align:center;">₹ 1039 </h6>
-          <p style="color:red ; text-align: center;">(54% OFF)</p> 
-        </div>
-      </div>
-      <div class="tcontainer">
-        <a href="">
-          <img src="{% static 'images/jogger5.jpeg' %}" alt="">
-          <img class="ttopimg" src="{% static 'images/jogger6.jpeg' %}" alt="">
-        </a>
-        <a href="">Highlander </a>
-        <div class="rate">
-          <h6 style="text-align:center;">₹ 1151 </h6>
-          <p style="color:red ; text-align: center;">(52% OFF)</p> 
-        </div>
-      </div>
-    </section>
-
-    <div class="load">
-     <button >Load More</button>
-    </div>
-
-    <div class="trend">
-      <h2>----- BEST SELLER -----</h2>
-      <h6>Top sale in this week</h6>
-    </div>
-
-
-    <section class="container1">
-      <div class="tcontainer">
-        <a href="">
-          <img src="{% static 'images/pant j3.webp' %}" alt="">
-          <img class="ttopimg" src="{% static 'images/pantj4.webp' %}" alt="">
-        </a>
-        <a href="">Urban</a>
-        <div class="rate">
-          <h6 style="text-align:center;">₹ 1819 </h6>
-          <p style="color:red ; text-align: center;">(35% OFF)</p> 
-        </div>
-      </div>
-      <div class="tcontainer">
-        <a href="">
-          <img src="{% static 'images/pantj5.webp' %}" alt="">
-          <img class="ttopimg" src="{% static 'images/pantj6.webp' %}" alt="">
-        </a>
-        <a href="">Scarlett </a>
-        <div class="rate">
-          <h6 style="text-align:center;">₹ 1039 </h6>
-          <p style="color:red ; text-align: center;">(54% OFF)</p> 
-        </div>
-      </div>
-      <div class="tcontainer">
-        <a href="">
-          <img src="{% static 'images/pantj7.webp' %}" alt="">
-          <img class="ttopimg" src="{% static 'images/pantj8.webp' %}" alt="">
-        </a>
-        <a href="">Wander Soul </a>
-        <div class="rate">
-          <h6 style="text-align:center;">₹ 1151 </h6>
-          <p style="color:red ; text-align: center;">(52% OFF)</p> 
-        </div>
-      </div>
-    </section>
-
-    <section class="container1">
-      <div class="tcontainer">
-        <a href="">
-          <img src="{% static 'images/hoodi j1.webp' %}" alt="">
-          <img class="ttopimg" src="{% static 'images/hoodi j2.webp' %}" alt="">
-        </a>
-        <a href="">Assassins</a>
-        <div class="rate">
-          <h6 style="text-align:center;">₹ 1819 </h6>
-          <p style="color:red ; text-align: center;">(35% OFF)</p> 
-        </div>
-      </div>
-      <div class="tcontainer">
-        <a href="">
-          <img src="{% static 'images/hoodi j3.webp' %}" alt="">
-          <img class="ttopimg" src="{% static 'images/hoodij4.webp' %}" alt="">
-        </a>
-        <a href="">Wanderer </a>
-        <div class="rate">
-          <h6 style="text-align:center;">₹ 1039 </h6>
-          <p style="color:red ; text-align: center;">(54% OFF)</p> 
-        </div>
-      </div>
-      <div class="tcontainer">
-        <a href="">
-          <img src="{% static 'images/hoodij5.webp' %}" alt="">
-          <img class="ttopimg" src="{% static 'images/hoodi j6.webp' %}" alt="">
-        </a>
-        <a href="">Classic Zipper </a>
-        <div class="rate">
-          <h6 style="text-align:center;">₹ 1151 </h6>
-          <p style="color:red ; text-align: center;">(52% OFF)</p> 
-        </div>
-      </div>
-    </section>
-
-    <div class="viewm" >
-     <button >  View More</button>
-    </div>
-
-    <div class="trend">
-      <h2>----- New Arrivals -----</h2>
-    </div>
-
-    <section class="container1">
-      <div class="tcontainer">
-        <a href="">
-          <img src="{% static 'images/lastj1.webp' %}" alt="">
-          <img class="ttopimg" src="{% static 'images/last j2.webp' %}" alt="">
-        </a>
-        <a href="">Intrigued</a>
-        <div class="rate">
-          <h6 style="text-align:center;">₹ 1819 </h6>
-          <p style="color:red ; text-align: center;">(35% OFF)</p> 
-        </div>
-      </div>
-      <div class="tcontainer">
-        <a href="">
-          <img src="{% static 'images/lastj3.webp' %}" alt="">
-          <img class="ttopimg" src="{% static 'images/last4.webp' %}" alt="">
-        </a>
-        <a href="">Allergic </a>
-        <div class="rate">
-          <h6 style="text-align:center;">₹ 1039 </h6>
-          <p style="color:red ; text-align: center;">(54% OFF)</p> 
-        </div>
-      </div>
-      <div class="tcontainer">
-        <a href="">
-          <img src="{% static 'images/pantj7.webp' %}" alt="">
-          <img class="ttopimg" src="{% static 'images/pantj8.webp' %}' " alt="">
-        </a>
-        <a href="">Classic Crew </a>
-        <div class="rate">
-          <h6 style="text-align:center;">₹ 1151 </h6>
-          <p style="color:red ; text-align: center;">(52% OFF)</p> 
-        </div>
-      </div>
-    </section>
-
-    <section class="container1">
-      <div class="tcontainer">
-        <a href="">
-          <img src="{% static 'images/short3.webp' %} " alt="">
-          <img class="ttopimg" src="{% static 'images/short4.webp' %} " alt="">
-        </a>
-        <a href="">Brute Shorts</a>
-        <div class="rate">
-          <h6 style="text-align:center;">₹ 1819 </h6>
-          <p style="color:red ; text-align: center;">(35% OFF)</p> 
-        </div>
-      </div>
-      <div class="tcontainer">
-        <a href="">
-          <img src="{% static 'images/short5.webp' %} " alt="">
-          <img class="ttopimg" src="{% static 'images/short6.webp' %}" alt="">
-        </a>
-        <a href="">Tyson Shorts</a>
-        <div class="rate">
-          <h6 style="text-align:center;">₹ 1039 </h6>
-          <p style="color:red ; text-align: center;">(54% OFF)</p> 
-        </div>
-      </div>
-      <div class="tcontainer">
-        <a href="">
-          <img src="{% static 'images/short7.webp' %}" alt="">
-          <img class="ttopimg" src="{% static 'images/short8.webp' %}" alt="">
-        </a>
-        <a href="">Bryant Shorts</a>
-        <div class="rate">
-          <h6 style="text-align:center;">₹ 1151 </h6>
-          <p style="color:red ; text-align: center;">(52% OFF)</p> 
-        </div>
-      </div>
-    </section>
-
-    <div class="viewm">
-     <button >  View More</button>
-    </div>
-
-    <section >
-      <div class="fetures">
-        <div class="f2">
-            <div class="imm">
-              <i class="fa-solid fa-car"></i>
-            </div>
-            <div>
-              <h4>FREE SHIPPING</h4>
-              <h6>Free Shipping On All Orders</h6>
-            </div>
-        </div>
-        <div class="f2">
-          <div class="imm">
-            <i class="fa-regular fa-circle"></i>
-          </div>
-          <div>
-            <h4>SUPPORT</h4>
-            <h6>Mon-Sat 10AM to 7PM</h6>
-          </div>
-        </div>
-        <div class="f2">
-          <div class="imm">
-            <i class="fa-solid fa-arrow-rotate-right" ></i>
-          </div>
-          <div>
-            <h4>15 DAYS RETURN</h4>
-            <h6>Simply return it within 15 days</h6>
-          </div>
-        </div>
-        <div class="f2">
-          <div class="imm">
-            <i class="fa-solid fa-unlock-keyhole"></i>
-          </div>
-          <div>
-            <h4>100% SECURE PAYMENTS</h4>
-            <h6>AES-256bit Secure Payments</h6>
-         </div>
-        </div>
-      </div>
-    </section>
-
-
-  <footer class="text-center text-lg-start bg-light text-muted">
-    <section class="" style="padding: 3px;">
-      <div class="container text-center text-md-start mt-5">
-        
-        <div class="row mt-3">
-          
-          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-            
-            <h6 class="text-uppercase fw-bold mb-4">
-              Categories
-            </h6>
-            <p>Printed T-shirts</p>
-            <p>Men Joggers</p>
-            <p>Women Joggers</p>
-            <p>Men Shorts</p>
-            <p>Women T-shirt Dress</p>
-            <p>Hoodies</p>
-          </div>
-          
-
-          
-          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-            
-            <h6 class="text-uppercase fw-bold mb-4">
-              Need Help
-            </h6>
-            <p>Track Your Order</p>
-            <p>Returns & Exchanges</p>
-            <p>Contact Us</p>
-          </div>
-          
-
-          
-          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-            
-            <h6 class="text-uppercase fw-bold mb-4">
-              Company
-            </h6>
-            <p>Shipping Policy</p>
-            <p>Privacy Policy</p>
-            <p>Terms of Service</p>
-          </div>
-          
-
-          
-          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-            
-            <h6 class="text-uppercase fw-bold mb-4">Get in touch</h6>
-            <p>
-              <i class="fas fa-envelope me-3"></i>
-              care@nobero.com
-            </p>
-          </div>
-
-
-          
-
-        </div>
-      </div>
-    </section>
-    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-      © 2022 NOBERO. All Rights Reserved by Pratyaya E-commerce Pvt. Ltd.
-    </div>
-    <!-- Copyright -->
-  </footer>
-<!-- Footer -->
-
-
-
-    
-    
-
-
-
-
-    <!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" 
-integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-
-</body>
-</html>
+{% endblock content %}
