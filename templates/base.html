@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {% block title %}{% endblock title %} </title>
+    
+    <script src="https://kit.fontawesome.com/59e29f4926.js" crossorigin="anonymous"></script>
+    {% load static%}
+    {% block style %}{% endblock style %}
+    <link rel="stylesheet" href="{% static 'style.css'%}">
+    <link rel="stylesheet" href="{% static 'account.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar navbar-expand-lg bg-light" style="padding: 15px;">
+        <div class="container-fluid">
+          <img src="{% static 'images/logo.webp' %}" alt="">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navig' %} ation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: black;">
+                Men
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Topwear</a></li>
+                  <li><a class="dropdown-item" href="#">Bottomwear</a></li>
+                  <li><a class="dropdown-item" href="#">Combo Offers</a></li>
+                  <li><a class="dropdown-item" href="#">Sports & Activewear</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: black;">
+                  Women
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Topwear</a></li>
+                  <li><a class="dropdown-item" href="#">Bottomwear</a></li>
+                  <li><a class="dropdown-item" href="#">Combo Offers</a></li>
+                  <li><a class="dropdown-item" href="#">Sports & Activewear</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: black;">
+                  Hoodies & Sweatshirts
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Printed Hoodies</a></li>
+                  <li><a class="dropdown-item" href="#">Fassion Forware Hoodies</a></li>
+                  <li><a class="dropdown-item" href="#">Classic Plain Hoodies</a></li>
+                  <li><a class="dropdown-item" href="#">Classic Plain Zipper Hoodies</a></li>
+                  <li><a class="dropdown-item" href="#">Cllasic Sweatshirt</a></li>
+                  <li><a class="dropdown-item" href="#">Classic Kid Hoodies</a></li>
+                  <li><a class="dropdown-item" href="#">Wanderer-Travel Hoodies</a></li>
+                  <li><a class="dropdown-item" href="#">Hoodie Combo</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: black;">
+                  Everyday Co-ords
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Men Co-ords</a></li>
+                  <li><a class="dropdown-item" href="#">Women Co-ords</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active">TravelHoodie</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">TrackOrder</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active btn btn-light" style="padding: 4px;" >Login</a>
+              </li>
+            </ul>
+
+            <form class="d-flex" role="search">
+              
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <span class="input-group-text border-0" id="search-addon">
+                <a href=""><i class="fas fa-search" style="color: gold;"></i></a>
+              </span>
+            </form>
+            <a class="px-4" href="{% url 'signin' %}"><i class="fa-solid fa-user" style="color:gold;"></i></a>
+            <a href=""><i class="fa-solid fa-cart-shopping" style="color: gold;"></i></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    {% block content %}{% endblock content %}
+
+
+
+  <footer class="text-center text-lg-start bg-light text-muted">
+    <section class="" style="padding: 3px;">
+      <div class="container text-center text-md-start mt-5">
+        
+        <div class="row mt-3">
+          
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            
+            <h6 class="text-uppercase fw-bold mb-4">
+              Categories
+            </h6>
+            <p>Printed T-shirts</p>
+            <p>Men Joggers</p>
+            <p>Women Joggers</p>
+            <p>Men Shorts</p>
+            <p>Women T-shirt Dress</p>
+            <p>Hoodies</p>
+          </div>
+          
+
+          
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            
+            <h6 class="text-uppercase fw-bold mb-4">
+              Need Help
+            </h6>
+            <p>Track Your Order</p>
+            <p>Returns & Exchanges</p>
+            <p>Contact Us</p>
+          </div>
+          
+
+          
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            
+            <h6 class="text-uppercase fw-bold mb-4">
+              Company
+            </h6>
+            <p>Shipping Policy</p>
+            <p>Privacy Policy</p>
+            <p>Terms of Service</p>
+          </div>
+          
+
+          
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            
+            <h6 class="text-uppercase fw-bold mb-4">Get in touch</h6>
+            <p>
+              <i class="fas fa-envelope me-3"></i>
+              care@nobero.com
+            </p>
+          </div>
+
+
+          
+
+        </div>
+      </div>
+    </section>
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2022 NOBERO. All Rights Reserved by Pratyaya E-commerce Pvt. Ltd.
+    </div>
+    <!-- Copyright -->
+  </footer>
+<!-- Footer -->
+
+
+
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
