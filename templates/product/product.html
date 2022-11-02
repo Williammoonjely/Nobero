@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}NOBERO | Category Name{% endblock title %}
+{% block style %}
+<link rel="stylesheet" href="{% static './categories.css' %}">
+{% endblock style %}
+{% block content %}
+
+    <section class="container">
+        <div class="row">
+            <img class="col-lg-6 col-12" src="{% static './productimage/image-1_450eec77-992e-46f7-a8e0-3cd60964b054_360x.webp' %}" alt="">
+            <div class="col-lg-6 col-12">
+                <h4 id="internet">Internet Is Broken</h4>
+                <h3> ₹ 1,199 ₹ 2,499
+                    <span id="offcolr">(53% OFF)</span></h3>
+                <h3 id="inclusive">Inclusive of all taxes. </h3>
+                <h4 id="size">Size: S</h4>
+                <div class="circle">
+                    <h6  class="vround" >S</h6>
+                    <h6  class="vround"  >M</h6>
+                    <h6  class="vround"  >L</h6>
+                    <h6  class="vround"  >XL</h6>
+                    <h6  class="vround"  >XLL</h6>
+                </div>
+                <div >
+                    <h3 id="size" >Color: Olive Green</h3>
+                    <button id="green"></button>
+                </div>
+                <div class="textd" >
+                    <a href=""><button class="cart"><i class="fa-solid fa-cart-shopping"></i><h4>ADD TO CART</h4></button></a>
+                </div>
+                <div class="imgfourmo">
+                    <img class="imgfour" src="./productimage/ICONS-01_940x.webp" alt="">
+                </div>
+                <div class="descri">
+                    <h4>Description</h4>
+                    <p class="sentence">Why look boring, when you can look interesting? Grab amazing Hoodies, 
+                        available in multiple colors and all sizes. Perfect for you or Someone you
+                        care about.Look Stylish this Season!</p>
+                    <ul>
+                        <li>100% Pure Cotton</li>
+                        <li>Top Quality Prints & Fabric</li>
+                        <li>Hooded Neck with Drawstring Ties</li>
+                        <li>Kangaroo Pockets & Regular Fit</li>
+                        <li>15 Day Refund Guarantee</li>
+                        <li>Paytm Accepted & Lazypay Available.<br>
+                            100%Cotton;340gsm;Fleece</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}
