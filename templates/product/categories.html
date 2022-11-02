@@ -16,45 +16,48 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-4 col-6">
+            {% for vi in product %}
+            
             <div class="">
-                <img class="img-fluid" src="{% static './productimage/image-1_450eec77-992e-46f7-a8e0-3cd60964b054_360x.webp' %}" alt="">
-                <h5>Internet Is Broken</h5>
-                <h5>₹ 1,199 ₹ 2,499 (53% OFF)</h5>
+                <img class="img-fluid" src="{{vi.image.url}}" alt="">
+                <h5>{{vi.title}}</h5>
+                <h5>₹ {{vi.price}} ₹ {{vi.discount}} <span id="red">(53% OFF)</span></h5>
+               {% endfor %}
             </div>
         </div>
         <div class="col-lg-4  col-6">
             <div class="">
                 <img class="img-fluid" src="{% static './productimage/image-1_450eec77-992e-46f7-a8e0-3cd60964b054_360x.webp' %}" alt="">
                 <h5>Internet Is Broken</h5>
-                <h5>₹ 1,199 ₹ 2,499 (53% OFF)</h5>
+                <h5>₹ 1,199 ₹ 2,499 <span id="red">(53% OFF)</span></h5>
             </div>
         </div>
         <div class="col-lg-4 col-6">
             <div class="">
                 <img class="img-fluid" src="{% static './productimage/image-1_450eec77-992e-46f7-a8e0-3cd60964b054_360x.webp' %}" alt="">
                 <h5>Internet Is Broken</h5>
-                <h5>₹ 1,199 ₹ 2,499 (53% OFF)</h5>
+                <h5>₹ 1,199 ₹ 2,499 <span id="red">(53% OFF)</span></h5>
             </div>
         </div>
         <div class="col-lg-4 col-6">
             <div class="">
                 <img class="img-fluid" src="{% static './productimage/image-1_450eec77-992e-46f7-a8e0-3cd60964b054_360x.webp' %}" alt="">
                 <h5>Internet Is Broken</h5>
-                <h5>₹ 1,199 ₹ 2,499 (53% OFF)</h5>
+                <h5>₹ 1,199 ₹ 2,499 <span id="red">(53% OFF)</span></h5>
             </div>
         </div>
         <div class="col-lg-4 col-6">
             <div class="">
                 <img class="img-fluid" src="{% static './productimage/image-1_450eec77-992e-46f7-a8e0-3cd60964b054_360x.webp' %}" alt="">
-                <h5>Internet Is Broken</h5>
-                <h5>₹ 1,199 ₹ 2,499 (53% OFF)</h5>
+                <h5 id="heading">Internet Is Broken</h5>
+                <h5>₹ 1,199 ₹ 2,499 <span id="red">(53% OFF)</span></h5>
             </div>
         </div>
         <div class="col-lg-4  col-6">
             <div class="">
                 <img class="img-fluid" src="{% static './productimage/image-1_450eec77-992e-46f7-a8e0-3cd60964b054_360x.webp' %}" alt="">
                 <h5>Internet Is Broken</h5>
-                <h5>₹ 1,199 ₹ 2,499 (53% OFF)</h5>
+                <h5>₹ 1,199 ₹ 2,499 <span id="red">(53% OFF)</span></h5>
             </div>
         </div>
     </div>

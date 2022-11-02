@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+.container{
+    margin: 100px auto;
+}
 .hoodietop{
     background-color: rgb(136, 136, 136);
     color: white;
@@ -14,14 +17,31 @@
     padding: 50px;
     
 }
+
 h5{
     text-align: center;
+}
+.TB{
+    display: flex;
+}
+.D{
+    color:#7a7a7a;
+}
+.Dcolour{
+    color: #888888;
+}
+.TB form{
+    padding: 9px;
+}
+.pricing{
+    font-size: 18px
 }
 #offcolr{
     color: red;
 }
 #inclusive{
     line-height: 20px;
+    font-size: 13px;
 }
 #size{
     line-height: 50px;
@@ -88,15 +108,26 @@ h5{
 }
 .cart{
     display: flex;
-    gap: 20px;
-    padding: 10px;
-    background-color: goldenrod;
+    padding: 5px;
+    background-color: #ad8233;
     color: white;
     border-radius: 10px;
+    width: 300px;
    
+}
+.textd button{
+    border: none;
+    text-decoration: none;
+    justify-content: center;
+    box-shadow: 5px 5px 9px #888888;
+    gap: 10px;
+  
 }
 .textd a{
     text-decoration: none;
+}
+.textd i{
+    padding: 7px;
 }
 .imgfour{
 
@@ -118,6 +149,100 @@ h5{
 }
 #internet{
     line-height: 30px;
-    font-size: 20px;
+    font-size: 22px;
 }
+
+
+
+
+.custom-radio-button div {
+    display: inline-block;
+}
+.custom-radio-button input[type="radio"] {
+    display: none;
+}
+  .custom-radio-button input[type="radio"] + label {
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+.custom-radio-button input[type="radio"] + label span {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: -1px 4px 0 0;
+    vertical-align: middle;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    line-height: 44px;
+}
+.custom-radio-button input[type="radio"] + label span img {
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+  .custom-radio-button input[type="radio"]#color-red + label span {
+    background-color: black;
+}
+.custom-radio-button input[type="radio"]#color-blue + label span {
+    background-color: rgb(114, 113, 113);
+}
+.custom-radio-button input[type="radio"]#color-orange + label span {
+    background-color: rgb(18, 103, 129);
+}
+.custom-radio-button input[type="radio"]#color-pink + label span {
+    background-color: rgb(110, 38, 5);
+}
+.custom-radio-button input[type="radio"]:checked + label span {
+    opacity: 1;
+    background: url("https://www.positronx.io/wp-content/uploads/2019/06/tick-icon-4657-01.png")
+      center center no-repeat;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+}
+
+
+
+
+
+  
+  .button:hover {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    perspective: 1000px;
+  }
+  
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
     
+    30%, 50%, 70% {
+      transform: translate3d(-2px, 0, 0);
+    }
+    40%, 60% {
+      transform: translate3d(2px, 0, 0);
+  }
+}
+
+
+
+
+
+@media only screen and (max-width: 646px) {
+    .TB{
+        display: grid;
+    }
+    .iimg{
+        width: 300px;
+    }
+
+}

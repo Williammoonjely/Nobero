@@ -1,53 +1,162 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block title %}NOBERO | Category Name{% endblock title %}
-{% block style %}
-<link rel="stylesheet" href="{% static './categories.css' %}">
-{% endblock style %}
-{% block content %}
-
+    {% extends 'base.html' %}
+    {% load static %}
+    {% block title %}NOBERO | Product Name{% endblock title %}
+    {% block style %}
+    <link rel="stylesheet" href="{% static './categories.css' %}">
+    {% endblock style %}
+    {% block content %}
     <section class="container">
         <div class="row">
-            <img class="col-lg-6 col-12" src="{% static './productimage/image-1_450eec77-992e-46f7-a8e0-3cd60964b054_360x.webp' %}" alt="">
+            {% for vi in product %}
+            <img class="col-lg-6 col-12" src={{vi.image.url}} alt="" style="height: 20%;">
             <div class="col-lg-6 col-12">
-                <h4 id="internet">Internet Is Broken</h4>
-                <h3> ₹ 1,199 ₹ 2,499
+                <h4 id="internet">{{vi.title}}</h4>
+              
+                <h3 class="pricing"> ₹ {{vi.price}}
                     <span id="offcolr">(53% OFF)</span></h3>
                 <h3 id="inclusive">Inclusive of all taxes. </h3>
                 <h4 id="size">Size: S</h4>
-                <div class="circle">
-                    <h6  class="vround" >S</h6>
-                    <h6  class="vround"  >M</h6>
-                    <h6  class="vround"  >L</h6>
-                    <h6  class="vround"  >XL</h6>
-                    <h6  class="vround"  >XLL</h6>
-                </div>
-                <div >
+                <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                    <label class="btn btn-outline-secondary rounded-5"  for="option1">S</label>
+
+                    <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                    <label class="btn btn-outline-secondary rounded-5"  for="option2">M</label>
+
+                    <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                    <label class="btn btn-outline-secondary rounded-5"  for="option3">L</label>
+
+                    <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
+                    <label class="btn btn-outline-secondary rounded-5"  for="option4">XL</label>
+
+                    <input type="radio" class="btn-check" name="options" id="option5" autocomplete="off">
+                    <label class="btn btn-outline-secondary rounded-5"  for="option5">XXL</label>
+
+                    <input type="radio" class="btn-check" name="options" id="option6" autocomplete="off">
+                    <label class="btn btn-outline-secondary rounded-5" for="option6">XXXL</label>
+                    {% endfor %}
+                <div>
                     <h3 id="size" >Color: Olive Green</h3>
-                    <button id="green"></button>
+
+                    <div class="container" style="margin:10px auto;">
+                        <div class="row"> 
+                        <div class="custom-radio-button">
+                            <div>
+                                <input type="radio" id="color-red" name="color" value="color-red" checked>
+                                <label for="color-red">
+                                    <span>
+                                    </span>
+                                </label>
+                            </div>
+                            
+                            <div>
+                                <input type="radio" id="color-blue" name="color" value="color-blue">
+                                <label for="color-blue">
+                                    <span>
+                                    </span>
+                                </label>
+                            </div>
+                            
+                            <div>
+                                <input type="radio" id="color-orange" name="color" value="color-orange">
+                                <label for="color-orange">
+                                    <span>
+                                    </span>
+                                </label>
+                            </div>
+                        
+                            <div>
+                                <input type="radio" id="color-pink" name="color" value="color-pink">
+                                <label for="color-pink">
+                                    <span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="textd" >
-                    <a href=""><button class="cart"><i class="fa-solid fa-cart-shopping"></i><h4>ADD TO CART</h4></button></a>
+
+                <div class="TB">
+                    <div>
+                        <form action="/action_page.php">
+                            <label for="quantity">Quantity</label>
+                            <input type="number" id="quantity" name="quantity" min="1" max="5">
+                        </form>
+                    </div>
+
+
+                    <div class="textd button" >
+                        <a href=""><button class="cart"><i class="fa-solid fa-cart-shopping"></i><h4>ADD TO CART</h4></button></a>
+                    </div>
                 </div>
+
+                <img class="iimg" src="./images/4img.png" alt="" style="margin: 27px auto;">
+
+                
                 <div class="imgfourmo">
                     <img class="imgfour" src="./productimage/ICONS-01_940x.webp" alt="">
                 </div>
-                <div class="descri">
-                    <h4>Description</h4>
-                    <p class="sentence">Why look boring, when you can look interesting? Grab amazing Hoodies, 
-                        available in multiple colors and all sizes. Perfect for you or Someone you
-                        care about.Look Stylish this Season!</p>
-                    <ul>
-                        <li>100% Pure Cotton</li>
-                        <li>Top Quality Prints & Fabric</li>
-                        <li>Hooded Neck with Drawstring Ties</li>
-                        <li>Kangaroo Pockets & Regular Fit</li>
-                        <li>15 Day Refund Guarantee</li>
-                        <li>Paytm Accepted & Lazypay Available.<br>
-                            100%Cotton;340gsm;Fleece</li>
-                    </ul>
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                         aria-expanded="true" aria-controls="collapseOne" >
+                          Discreption
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" 
+                      aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p class="D"><b> Product discreption</b><p>
+
+                            <ul class="Dcolour">
+                                <li>100% Pure Cotton</li>
+                                <li>Top Quality Prints & Fabric</li>  
+                                <li>Hooded Neck with Drawstring Ties</li> 
+                                <li>Kangaroo Pockets & Regular Fit</li>
+                                <li>15 Day Refund Guarantee</li>
+                                <li>Paytm Accepted & Lazypay Available.</li>
+                                <li>100%Cotton;340gsm;Fleece</li>
+                            </ul>  
+
+                      </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-{% endblock content %}
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+    {% endblock content %}
