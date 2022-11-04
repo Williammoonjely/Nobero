@@ -4,4 +4,16 @@ from product.models import Category,Product
 # Create your views here.
 def index(request):
     cat = Category.objects.all()
-    return render(request,'home/index.html',{'cat':cat})
+
+    trend = Product.objects.all()
+
+    latest = Product.objects.order_by('-id')[0:6]
+
+    context ={
+        'cat':cat,
+        'trend':trend,
+        'latest':latest,
+    }
+
+    return render(request,'home/index.html',context)
+
