@@ -8,7 +8,7 @@ def index(request):
 
     trend = Product.objects.all()
 
-    latest = Product.objects.order_by('-id')
+    latest = Product.objects.order_by('-id')[0:6]
 
     context ={
         'cat':cat,
