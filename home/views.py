@@ -7,11 +7,13 @@ def index(request):
     cat = Category.objects.all()
 
     trend = Product.objects.all()
-    print(trend)
+
+    latest = Product.objects.order_by('-id')
 
     context ={
         'cat':cat,
         'trend':trend,
+        'latest':latest,
     }
 
     return render(request,'home/index.html',context)

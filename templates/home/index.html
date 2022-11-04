@@ -257,18 +257,21 @@ NOBERO | Home
 </div>
 
 <section class="container1">
+  {% for Product in latest %}
+  
   <div class="tcontainer">
     <a href="">
-      <img src="{% static 'images/lastj1.webp' %}" alt="">
-      <img class="ttopimg" src="{% static 'images/last j2.webp' %}" alt="">
+      <img src="{{Product.image.url}}" alt="">
+      <!-- <img class="ttopimg" src="{% static 'images/last j2.webp' %}" alt=""> -->
     </a>
-    <a href="">Intrigued</a>
+    <a href="">{{Product.title}}</a>
     <div class="rate">
-      <h6 style="text-align:center;">₹ 1819 </h6>
-      <p style="color:red ; text-align: center;">(35% OFF)</p> 
+      <h6 style="text-align:center;">₹{{Product.price}}</h6>
+      <p style="color:red ; text-align: center;">({{Product.discount}}% OFF)</p> 
     </div>
   </div>
-  <div class="tcontainer">
+  {% endfor %}
+  <!-- <div class="tcontainer">
     <a href="">
       <img src="{% static 'images/lastj3.webp' %}" alt="">
       <img class="ttopimg" src="{% static 'images/last4.webp' %}" alt="">
@@ -289,10 +292,10 @@ NOBERO | Home
       <h6 style="text-align:center;">₹ 1151 </h6>
       <p style="color:red ; text-align: center;">(52% OFF)</p> 
     </div>
-  </div>
+  </div> -->
 </section>
 
-<section class="container1">
+<!-- <section class="container1">
   <div class="tcontainer">
     <a href="">
       <img src="{% static 'images/short3.webp' %} " alt="">
@@ -326,7 +329,7 @@ NOBERO | Home
       <p style="color:red ; text-align: center;">(52% OFF)</p> 
     </div>
   </div>
-</section>
+</section> -->
 
 <div class="viewm">
  <button >  View More</button>
