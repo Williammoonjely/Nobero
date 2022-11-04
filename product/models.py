@@ -6,6 +6,9 @@ class Category(models.Model):
     title = models.TextField()
     image = models.ImageField()
 
+    def __str__(self):
+        return self.title
+
 
 
 class Product(models.Model):
@@ -14,5 +17,9 @@ class Product(models.Model):
     price = models.IntegerField()
     discount = models.IntegerField()
     category = models.ForeignKey('Category',on_delete= models.CASCADE)
+
+
+    def __str__(self):
+        return self.title
     
 
