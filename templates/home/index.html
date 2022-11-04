@@ -91,18 +91,22 @@ NOBERO | Home
 
 
 <section class="container1">
+  {% for Product in trend %}
+  {% if Product.trending == True %}
   <div class="tcontainer">
     <a href="">
-      <img src="{% static 'images/womenj1.webp' %}" alt="">
-      <img class="ttopimg" src="{% static 'images/womenj2.webp' %}" alt="">
+      <img src="{{Product.image.url}}" alt="">
+      <!-- <img class="ttopimg" src="{% static 'images/womenj2.webp' %}" alt=""> -->
     </a>
-    <a href="">Q-Rious </a>
+    <a href="">{{Product.title}}</a>
     <div class="rate">
-      <h6 style="text-align:center;">₹ 799 </h6>
-      <p style="color:red ; text-align: center;">(41% OFF)</p> 
+      <h6 style="text-align:center;">₹{{Product.price}}</h6>
+      <p style="color:red ; text-align: center;">({{Product.discount}}% OFF)</p> 
     </div>
   </div>
-  <div class="tcontainer">
+  {% endif %}
+  {% endfor %}
+  <!-- <div class="tcontainer">
     <a href="">
       <img src="{% static 'images/womenj3.webp' %}" alt="">
       <img class="ttopimg" src="{% static 'images/women j4.webp' %}" alt="">
@@ -123,10 +127,10 @@ NOBERO | Home
       <h6 style="text-align:center;">₹ 1499 </h6>
       <p style="color:red ; text-align: center;">(26% OFF)</p> 
     </div>
-  </div>
+  </div> -->
 </section>
 
-<section class="container1">
+<!-- <section class="container1">
   <div class="tcontainer">
     <a href="">
       <img src="{% static 'images/jogger1.webp' %}" alt="">
@@ -160,7 +164,7 @@ NOBERO | Home
       <p style="color:red ; text-align: center;">(52% OFF)</p> 
     </div>
   </div>
-</section>
+</section> -->
 
 <div class="load">
  <button >Load More</button>

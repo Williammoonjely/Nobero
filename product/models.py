@@ -14,5 +14,4 @@ class Product(models.Model):
     price = models.IntegerField()
     discount = models.IntegerField()
     category = models.ForeignKey('Category',on_delete= models.CASCADE)
-    
-
+    trending = models.BooleanField(default=False)

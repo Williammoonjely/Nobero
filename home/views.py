@@ -5,4 +5,14 @@ from product.models import Category,Product
 # Create your views here.
 def index(request):
     cat = Category.objects.all()
-    return render(request,'home/index.html',{'cat':cat})
+
+    trend = Product.objects.all()
+    print(trend)
+
+    context ={
+        'cat':cat,
+        'trend':trend,
+    }
+
+    return render(request,'home/index.html',context)
+
