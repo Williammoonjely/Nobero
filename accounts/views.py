@@ -4,6 +4,9 @@ from .forms import LoginForm , RegistrationForm
 from django.contrib.auth import login , authenticate , logout
 # from .models import Profile
 from django.contrib import messages
+from product.models import Category,Product
+from django.urls import reverse
+from django.shortcuts import redirect
 
 
 # Create your views here.
@@ -27,7 +30,7 @@ def signup(request):
             print(user)
             
             messages.success(request,'you have signed up successfully!')
-            return render(request,'home/index.html')
+            return redirect(reverse('home:index'))
 
         else:
             return render(request,'accounts/account.html', {'form':form})
@@ -45,9 +48,11 @@ def signin(request):
             user = authenticate(request,email = email,password = password)
             print(email,password)
             print(user)
+            print(user.name)
             if user is not None:
                 login(request,user)
-                return render(request,'home/index.html')
+
+                return redirect(reverse('home:index'))
             else:
                 print('invalid credentials!')
 
@@ -59,7 +64,7 @@ def signin(request):
 
 def signout(request):
     logout(request)
-    return render(request,'home/index.html')
+    return redirect(reverse('home:index'))
 
 
 # def user(request):
