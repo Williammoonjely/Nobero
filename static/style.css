@@ -229,3 +229,16 @@
   
 
 
+
+.c_0{
+	color: black;
+	gap: 5px;
+	justify-content: center;
+	padding: 5px;
+}
+.c_0 i{
+	padding-top: 4px;
+}
+.c_1{
+	border: 1px solid black;
+}
